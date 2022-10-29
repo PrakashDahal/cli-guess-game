@@ -40,6 +40,7 @@ async function setLevel() {
             'SuperHard'
         ]
     });
+    console.log();
     return level.value
 }
 
@@ -65,9 +66,9 @@ async function checkNumber(num) {
         winner.stop()
         process.exit(0);
     } else if (num < randomNumber) {
-        console.log("TOO LOW");
+        console.log("TOO LOW\n");
     } else {
-        console.log("TOO HIGH");
+        console.log("TOO HIGH\n");
     }
     await startGame()
 }
@@ -78,7 +79,7 @@ async function startGame() {
         let userNumber = await takeValue()
         checkNumber(userNumber)
     } else {
-        const looser = chalkAnimation.karaoke(`\nYOU LOSE! THE NUMBER WAS ${randomNumber}`);
+        const looser = chalkAnimation.karaoke(`YOU LOSE! THE NUMBER WAS ${randomNumber}`);
         await sleep()
         looser.stop()
         process.exit(1);

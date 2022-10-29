@@ -1,0 +1,23 @@
+{
+  "name": "cli-guess-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "game",
+    "node",
+    "guess"
+  ],
+  "author": "Prakash Dahal",
+  "license": "ISC",
+  "bin": "./index.js",
+  "dependencies": {
+    "chalk-animation": "^2.0.3",
+    "inquirer": "^9.1.4"
+  }
+}

@@ -2,10 +2,10 @@
 
 |Levels     |Number|
 --- | --- | 
-|Easy       |10    | 
-|Medium     |50    | 
-|Hard       |100   | 
-|SuperHard  |1000  | 
+|Easy       |1 - 10    | 
+|Medium     |1 - 50    | 
+|Hard       |1 - 100   | 
+|SuperHard  |1 - 1000  | 
 
 - A command line game.
 - Max attempt is 3.
@@ -14,5 +14,7 @@
 ```
 npx cli-guess-game
 ```
+
+[Visit Source Code](https://github.com/PrakashDahal/cli-guess-game)
 
 *Note: You must have node and npx version greater than 12 in your machine to run this.*

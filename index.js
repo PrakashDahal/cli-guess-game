@@ -7,6 +7,7 @@ import chalkAnimation from 'chalk-animation';
 let attempt = 3;
 let randomNumber;
 
+
 const levelRules = {
     Easy: '10',
     Medium: '50',
@@ -14,6 +15,7 @@ const levelRules = {
     SuperHard: '1000'
 }
 
+let level = 'EASY';
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -23,7 +25,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 async function setRandomNumber() {
-    const level = await setLevel()
+    level = await setLevel()
 
     randomNumber = getRandomIntInclusive(1, levelRules[level] || levelRules.Easy)
 }
@@ -48,7 +50,7 @@ async function takeValue() {
     const userValue = await inquirer.prompt({
         name: 'entered_number',
         type: 'input',
-        message: 'GUESS THE NUMBER?',
+        message: `GUESS THE NUMBER BETWEEN (1-${levelRules[level]})?`,
         default() {
             return '0';
         }
